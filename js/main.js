@@ -1,6 +1,5 @@
 function getRandomIntegerNumber(from, to) {
   if (from < 0 || to < 0) {
-    console.error("Числа должны быть положительными.");
     return undefined;
   }
 
@@ -15,9 +14,12 @@ function getRandomIntegerNumber(from, to) {
   from = Math.ceil(from);
   to = Math.ceil(to);
 
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+  return Math.floor(Math.random() * (to - from + 1)) + from;
 }
 
 function checkStringLength(str, maxLength) {
   return str.length <= maxLength;
 }
+
+getRandomIntegerNumber(1, 10);
+checkStringLength("abc", 4);
